@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.leftContainer{
+    width: 50%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+button{
+    
+    align-self: center;
+    padding: 15px 50px;
+    border-radius: 20px;
+    background:linear-gradient(45deg,red,orange);
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+
+}
+.RightContainer{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0 0 1.5rem;
+    overflow-y: scroll;
+    /* border: 5px solid black; */
+
+}
+.RightContainer h1{
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+.rightNotesContainer{
+    width: 100%;
+    height: 100vh;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow-y: auto;
+}
+
+.notes{
+    min-width: 100px;
+    min-height: 100px;
+    /* border: 5px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    border-radius: 20px;
+    padding: 10px;
+   
+    text-align: left;
+    animation: notespop 0.6s ease-in-out ;
+    
+}
+@keyframes notespop {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.closeBtn{
+   
+    background-color: black;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    height: fit-content;
+    color: red;
+}
+.hidden{
+    display: none;
+}
